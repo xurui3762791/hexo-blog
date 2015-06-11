@@ -214,51 +214,51 @@ h6 {
   font-family: Cambria, Georgia, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", "Times New Roman", serif;
 }
 h1 {
-  font-size: 24px;
+  font-size: 26px;
 }
 @media (max-width: 767px) {
   h1 {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 h2 {
-  font-size: 22px;
+  font-size: 24px;
 }
 @media (max-width: 767px) {
   h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 h3 {
-  font-size: 20px;
+  font-size: 22px;
 }
 @media (max-width: 767px) {
   h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 h4 {
-  font-size: 18px;
+  font-size: 20px;
 }
 @media (max-width: 767px) {
   h4 {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 h5 {
-  font-size: 16px;
+  font-size: 18px;
 }
 @media (max-width: 767px) {
   h5 {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 h6 {
-  font-size: 14px;
+  font-size: 16px;
 }
 @media (max-width: 767px) {
   h6 {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 p {
@@ -901,13 +901,6 @@ body {
   width: 100%;
   min-height: 50px;
 }
-.footer-inner {
-  margin: 20px auto;
-  width: 960px;
-}
-.one-column .footer-inner {
-  width: 700px;
-}
 .headband {
   height: 3px;
   background: #222;
@@ -917,9 +910,6 @@ body {
 }
 .header-inner {
   position: relative;
-}
-.site-meta {
-  text-align: left;
 }
 @media (max-width: 767px) {
   .site-meta {
@@ -1187,7 +1177,7 @@ input.menu-search-input {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e2aaff;
+  background: #ed33c3;
 }
 .sidebar-nav {
   margin: 0;
@@ -1532,7 +1522,7 @@ input.menu-search-input {
   }
 }
 .posts-collapse {
-  margin-left: 0;
+  margin-left: 55px;
 }
 @media (max-width: 767px) {
   .posts-collapse {

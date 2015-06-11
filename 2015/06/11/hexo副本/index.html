@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="hexo,npm,server," />
+  <meta name="keywords" content="Grunt,Stylus,uglify,watch," />
 
 
 
@@ -55,7 +55,7 @@
 
 
 
-  <title> hexo常用命令笔记 // web前端开发技术分享 </title>
+  <title> Grunt打造前端自动化 // web前端开发技术分享 </title>
 </head>
 
 <body>
@@ -127,13 +127,13 @@
           
           
             
-              hexo常用命令笔记
+              Grunt打造前端自动化
             
           
         </h1>
 
         <span class="post-time">
-          发表于 2015-06-09
+          发表于 2015-06-11
         </span>
 
         
@@ -142,8 +142,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/06/09/hexo副本/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/09/hexo副本/"></span>
+            <a href="/2015/06/11/hexo副本/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/11/hexo副本/"></span>
             </a>
           </span>
           
@@ -159,7 +159,7 @@
       
 
       
-        <p>hexo出自台湾大学生 tommy351 之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。先看看tommy是如何吐槽Octopress的 →＿→ Hexo颯爽登場 。<br>如果你对默认配置满意，只需几个命令便可秒搭一个hexo。<br>如果你跟我一样喜欢折腾下，30分钟也足够个性化。<br>如果你过于喜欢折腾，可以折腾个把星期，尽情的玩。<br>搭建过程你或许觉得有那么点小繁琐，但一旦搭建完成，写文章是极简单，极舒服的。<br>只需要几个简单命令，你就可以完成一切。<br>原文链接<a href="http://jslite.io/" target="_blank" rel="external">http://jslite.io/</a><br><a id="more"></a></p>
+        <p>为何需要任务运行器？为何选择Grunt?<br>对于需要反复重复的任务，例如压缩、编译、单元测试、代码检查等，自动化工具可以减轻你的劳动，简化你的工作。那么为何选择Grunt呢？可是是没有更好的选择了。<br>Grunt基于Node.js，安装之前要先安装Node.js。<br><a id="more"></a></p>
 <h2 id="安装">安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g #&#23433;&#35013;    &#10;npm update hexo -g #&#21319;&#32423;  &#10;hexo init blog #&#21021;&#22987;&#21270;&#65292;&#29983;&#25104;&#25991;&#20214;&#22841;&#20026;blog&#10;cd blog&#10;npm install #&#23433;&#35013;&#20381;&#36182;&#24211;&#10;hexo server #&#36816;&#34892;&#27979;&#35797;</span><br></pre></td></tr></table></figure>
 <h2 id="简写">简写</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &#34;&#25105;&#30340;&#21338;&#23458;&#34; == hexo new &#34;&#25105;&#30340;&#21338;&#23458;&#34; #&#26032;&#24314;&#25991;&#31456;&#10;hexo p == hexo publish&#10;hexo g == hexo generate#&#29983;&#25104;&#10;hexo s == hexo server #&#21551;&#21160;&#26381;&#21153;&#39044;&#35272;&#10;hexo d == hexo deploy#&#37096;&#32626;</span><br></pre></td></tr></table></figure>
 <h2 id="服务器">服务器</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server #Hexo &#20250;&#30417;&#35270;&#25991;&#20214;&#21464;&#21160;&#24182;&#33258;&#21160;&#26356;&#26032;&#65292;&#24744;&#26080;&#39035;&#37325;&#21551;&#26381;&#21153;&#22120;&#12290;&#10;hexo server -s #&#38745;&#24577;&#27169;&#24335;&#10;hexo server -p 5000 #&#26356;&#25913;&#31471;&#21475;&#10;hexo server -i 192.168.1.1 #&#33258;&#23450;&#20041; IP</span><br></pre></td></tr></table></figure>
@@ -175,11 +175,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/"> #hexo </a>
+            <a href="/tags/Grunt/"> #Grunt </a>
           
-            <a href="/tags/npm/"> #npm </a>
+            <a href="/tags/Stylus/"> #Stylus </a>
           
-            <a href="/tags/server/"> #server </a>
+            <a href="/tags/uglify/"> #uglify </a>
+          
+            <a href="/tags/watch/"> #watch </a>
           
         </div>
       
@@ -188,11 +190,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/09/hexo/">hexo常用命令笔记</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/06/09/hexo/">hexo常用命令笔记</a>
             
           </div>
         </div>
@@ -208,8 +210,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/06/09/hexo副本/"
-               data-title="hexo常用命令笔记" data-url="http://jsio.cn/2015/06/09/hexo副本/">
+          <div class="ds-thread" data-thread-key="2015/06/11/hexo副本/"
+               data-title="Grunt打造前端自动化" data-url="http://jsio.cn/2015/06/11/hexo副本/">
           </div>
         
       </div>
@@ -264,7 +266,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>

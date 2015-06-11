@@ -1177,7 +1177,7 @@ input.menu-search-input {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ed33c3;
+  background: #ff6129;
 }
 .sidebar-nav {
   margin: 0;
@@ -1523,6 +1523,7 @@ input.menu-search-input {
 }
 .posts-collapse {
   margin-left: 55px;
+  margin-left: 10px;
 }
 @media (max-width: 767px) {
   .posts-collapse {
@@ -1607,6 +1608,14 @@ input.menu-search-input {
 .posts-collapse .post-title a {
   color: #666;
   border-bottom: none;
+}
+.posts-collapse .post-header:hover {
+  background: #f1f1f1;
+  -webkit-transition: all 0.9s;
+  -moz-transition: all 0.9s;
+  -ms-transition: all 0.9s;
+  -ms-transition: all 0.9s;
+  transition: all 0.9s;
 }
 .page-home .post-type-quote .post-header,
 .page-post-detail .post-type-quote .post-header,

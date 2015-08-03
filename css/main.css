@@ -1177,7 +1177,7 @@ input.menu-search-input {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff6129;
+  background: #ffffb4;
 }
 .sidebar-nav {
   margin: 0;
@@ -1704,7 +1704,17 @@ input.menu-search-input {
 }
 .tag-cloud a {
   display: inline-block;
-  margin: 10px;
+  margin: 5px;
+  padding: 0 5px;
+}
+.tag-cloud .tag-cloud-tags a {
+  color: #f00;
+}
+.tag-cloud .tag-cloud-tags a:hover {
+  color: #000;
+  background: #56c0da;
+  border: 0;
+  border-radius: 3px;
 }
 .post-gallery {
   display: table;

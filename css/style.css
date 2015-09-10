@@ -1463,14 +1463,14 @@ a {
 }
 .article-entry pre,
 .article-entry .highlight {
-  background: #272822;
+  background: #4d4d4d;
   margin: 10px 0;
   padding: 10px 10px;
   overflow: auto;
   color: #4c4c4c;
   line-height: 22.400000000000002px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
@@ -1532,7 +1532,7 @@ a {
   text-shadow: none;
 }
 .article-entry .highlight .line {
-  font-size: 15px;
+  font-size: 12px;
   height: 15px;
 }
 .article-entry .gist {
@@ -1540,7 +1540,7 @@ a {
   border-style: solid;
   border-color: #ddd;
   border-width: 1px 0;
-  background: #272822;
+  background: #4d4d4d;
   padding: 15px 20px 15px 0;
 }
 .article-entry .gist .gist-file {
@@ -1566,7 +1566,7 @@ a {
   border: none;
 }
 .article-entry .gist .gist-file .gist-meta {
-  background: #272822;
+  background: #4d4d4d;
   color: highlight-comment;
   font: 0.85em "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-shadow: 0 0;

@@ -1,548 +1,347 @@
-<!doctype html>
-<html class="theme-next use-motion theme-next-github">
+<!DOCTYPE html>
+<html>
 <head>
+  <meta charset="utf-8">
+  
+  <title>git常用命令 | web前端开发技术分享</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Git 常用命令整理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git常用命令">
+<meta property="og:url" content="http://jsio.cn/2015/08/03/git命令/index.html">
+<meta property="og:site_name" content="web前端开发技术分享">
+<meta property="og:description" content="Git 常用命令整理">
+<meta property="og:updated_time" content="2015-09-09T09:40:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git常用命令">
+<meta name="twitter:description" content="Git 常用命令整理">
+  
+    <link rel="alternative" href="/atom.xml" title="web前端开发技术分享" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/default_avatar.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">jsio</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">灵感 代码 梦想 未来</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="/#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Grunt/" style="font-size: 10px;">Grunt</a> <a href="/tags/Stylus/" style="font-size: 10px;">Stylus</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/server/" style="font-size: 10px;">server</a> <a href="/tags/uglify/" style="font-size: 10px;">uglify</a> <a href="/tags/watch/" style="font-size: 10px;">watch</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">jsio</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/default_avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">jsio</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">灵感 代码 梦想 未来</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="/#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-git命令" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/03/git命令/" class="article-date">
+  	<time datetime="2015-08-03T01:53:44.000Z" itemprop="datePublished">Aug 3 2015</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      git常用命令
+    </h1>
   
 
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-
-
-
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
-
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
-
-
-    <meta name="description" content="jsio.cn" />
-
-
-
-  <meta name="keywords" content="git," />
-
-
-
-
-
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
-
-
-
-<script type="text/javascript" id="hexo.configuration">
-  var CONFIG = {
-    scheme: 'github',
-    analytics: {
-      baidu: 'UA-3762791-1'
-    },
-    sidebar: 'post'
-  };
-</script>
-
-
-  <script type="text/javascript">
-   var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?cb4dc4600ffffa52fc10e1ed1932056d";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-  </script>
-
-
-
-  <title> git常用命令 // web前端开发技术分享 </title>
-</head>
-
-<body>
-<!--[if lte IE 8]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari." style='margin-left:auto;margin-right:auto;display: block;'/></a></div> <![endif]-->
-  <div class="container one-column page-post-detail">
-    <div class="headband"></div>
-
-    <div id="header" class="header">
-      <div class="header-inner">
-        <h1 class="site-meta">
-  <span class="logo-line-before"><i></i></span>
-  <a href="/" class="brand">
-      <span class="logo">
-        <i class="icon-logo"></i>
-      </span>
-      <span class="site-title">web前端开发技术分享</span>
-  </a>
-  <span class="logo-line-after"><i></i></span>
-</h1>
-
-
-  <ul id="menu" class="menu">
-     
-    
+      </header>
       
-      <li class="menu-item menu-item-home">
-        <a href="/">
-          <i class="menu-item-icon icon-home"></i> <br />
-          首頁
-        </a>
-      </li>
-    
-      
-      <li class="menu-item menu-item-archives">
-        <a href="/archives">
-          <i class="menu-item-icon icon-archives"></i> <br />
-          归档
-        </a>
-      </li>
-    
-      
-      <li class="menu-item menu-item-tags">
-        <a href="/tags">
-          <i class="menu-item-icon icon-tags"></i> <br />
-          标签
-        </a>
-      </li>
-    
-  </ul>
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+	</div>
 
+        
 
+        <div class="clearfix"></div>
       </div>
-    </div>
-
-    <div id="main" class="main">
-      <div class="main-inner">
-        <div id="content" class="content">
-          
-
-  <div id="posts" class="posts-expand">
+      
     
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              git常用命令
-            
-          
-        </h1>
-
-        <span class="post-time">
-          发表于 2015-08-03
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/08/03/git命令/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/03/git命令/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-
-      
-
-    
-    <div class="post-body">
-
-      
-      
-
+    <div class="article-entry" itemprop="articleBody">
       
         <p>Git 常用命令整理<br><a id="more"></a></p>
-<h2 id="初始化配置">初始化配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.&#37197;&#32622;&#20351;&#29992;git&#20179;&#24211;&#30340;&#20154;&#21592;&#22995;&#21517;&#10;git config --global user.name &#34;Your Name Comes Here&#34;&#10;&#10;2.&#37197;&#32622;&#20351;&#29992;git&#20179;&#24211;&#30340;&#20154;&#21592;email&#10;git config --global user.email you@yourdomain.example.com&#10;&#10;3.&#37197;&#32622;&#21040;&#32531;&#23384; &#40664;&#35748;15&#20998;&#38047;&#10;git config --global credential.helper cache &#10;&#10;4.&#20462;&#25913;&#32531;&#23384;&#26102;&#38388;&#10;git config --global credential.helper &#39;cache --timeout=3600&#39;  &#10;&#10;git config --global color.ui true&#10;git config --global alias.co checkout&#10;git config --global alias.ci commit&#10;git config --global alias.st status&#10;git config --global alias.br branch&#10;git config --global core.editor &#34;mate -w&#34;     &#35774;&#32622;Editor&#20351;&#29992;textmate&#10;git config -1 #&#21015;&#20030;&#25152;&#26377;&#37197;&#32622;&#10;&#10;&#29992;&#25143;&#30340;git&#37197;&#32622;&#25991;&#20214;~/.gitconfig</span><br></pre></td></tr></table></figure>
-<h2 id="查看、添加、提交、删除、找回，重置修改文件">查看、添加、提交、删除、找回，重置修改文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git help &#60;command&#62;   &#26174;&#31034;command&#30340;help  &#10;git show             &#26174;&#31034;&#26576;&#27425;&#25552;&#20132;&#30340;&#20869;&#23481;  &#10;git show $id  &#10;   &#10;git co  -- &#60;file&#62;    &#25243;&#24323;&#24037;&#20316;&#21306;&#20462;&#25913;  &#10;git co  .            &#25243;&#24323;&#24037;&#20316;&#21306;&#20462;&#25913;  &#10;   &#10;git add &#60;file&#62;       &#23558;&#24037;&#20316;&#25991;&#20214;&#20462;&#25913;&#25552;&#20132;&#21040;&#26412;&#22320;&#26242;&#23384;&#21306;  &#10;git add .            &#23558;&#25152;&#26377;&#20462;&#25913;&#36807;&#30340;&#24037;&#20316;&#25991;&#20214;&#25552;&#20132;&#26242;&#23384;&#21306;  &#10;   &#10;git rm &#60;file&#62;        &#20174;&#29256;&#26412;&#24211;&#20013;&#21024;&#38500;&#25991;&#20214;  &#10;git rm &#60;file&#62; --cached  # &#20174;&#29256;&#26412;&#24211;&#20013;&#21024;&#38500;&#25991;&#20214;&#65292;&#20294;&#19981;&#21024;&#38500;&#25991;&#20214;  &#10;   &#10;git reset &#60;file&#62;     &#20174;&#26242;&#23384;&#21306;&#24674;&#22797;&#21040;&#24037;&#20316;&#25991;&#20214;  &#10;git reset -- .       &#20174;&#26242;&#23384;&#21306;&#24674;&#22797;&#21040;&#24037;&#20316;&#25991;&#20214;  &#10;git reset --hard     &#24674;&#22797;&#26368;&#36817;&#19968;&#27425;&#25552;&#20132;&#36807;&#30340;&#29366;&#24577;&#65292;&#21363;&#25918;&#24323;&#19978;&#27425;&#25552;&#20132;&#21518;&#30340;&#25152;&#26377;&#26412;&#27425;&#20462;&#25913;  &#10;   &#10;git ci &#60;file&#62;  &#10;git ci .  &#10;git ci -a            &#23558;git add, git rm&#21644;git ci&#31561;&#25805;&#20316;&#37117;&#21512;&#24182;&#22312;&#19968;&#36215;&#20570;  &#10;git ci -am &#34;some comments&#34;  &#10;git ci --amend       &#20462;&#25913;&#26368;&#21518;&#19968;&#27425;&#25552;&#20132;&#35760;&#24405;  &#10;   &#10;git revert &#60;$id&#62;     &#24674;&#22797;&#26576;&#27425;&#25552;&#20132;&#30340;&#29366;&#24577;&#65292;&#24674;&#22797;&#21160;&#20316;&#26412;&#36523;&#20063;&#21019;&#24314;&#20102;&#19968;&#27425;&#25552;&#20132;&#23545;&#35937;  &#10;git revert HEAD      &#24674;&#22797;&#26368;&#21518;&#19968;&#27425;&#25552;&#20132;&#30340;&#29366;&#24577;</span><br></pre></td></tr></table></figure>
-<h2 id="查看文件diff">查看文件diff</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff &#60;file&#62;      &#27604;&#36739;&#24403;&#21069;&#25991;&#20214;&#21644;&#26242;&#23384;&#21306;&#25991;&#20214;&#24046;&#24322;  &#10;git diff  &#10;git diff &#60;$id1&#62; &#60;$id2&#62;   &#27604;&#36739;&#20004;&#27425;&#25552;&#20132;&#20043;&#38388;&#30340;&#24046;&#24322;  &#10;git diff &#60;branch1&#62;..&#60;branch2&#62; &#22312;&#20004;&#20010;&#20998;&#25903;&#20043;&#38388;&#27604;&#36739;  &#10;git diff --staged    &#27604;&#36739;&#26242;&#23384;&#21306;&#21644;&#29256;&#26412;&#24211;&#24046;&#24322;  &#10;git diff --cached    &#27604;&#36739;&#26242;&#23384;&#21306;&#21644;&#29256;&#26412;&#24211;&#24046;&#24322;  &#10;git diff --stat      &#20165;&#20165;&#27604;&#36739;&#32479;&#35745;&#20449;&#24687;</span><br></pre></td></tr></table></figure>
-<h2 id="查看提交记录">查看提交记录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log  &#10;git log &#60;file&#62;       &#26597;&#30475;&#35813;&#25991;&#20214;&#27599;&#27425;&#25552;&#20132;&#35760;&#24405;  &#10;git log -p &#60;file&#62;    &#26597;&#30475;&#27599;&#27425;&#35814;&#32454;&#20462;&#25913;&#20869;&#23481;&#30340;diff  &#10;git log -p -2        &#26597;&#30475;&#26368;&#36817;&#20004;&#27425;&#35814;&#32454;&#20462;&#25913;&#20869;&#23481;&#30340;diff  &#10;git log --stat       &#26597;&#30475;&#25552;&#20132;&#32479;&#35745;&#20449;&#24687;  &#10;&#10;tig&#10;Mac&#19978;&#21487;&#20197;&#20351;&#29992;tig&#20195;&#26367;diff&#21644;log&#65292;brew install tig</span><br></pre></td></tr></table></figure>
-<h2 id="取得Git仓库">取得Git仓库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.&#21021;&#22987;&#21270;&#19968;&#20010;&#29256;&#26412;&#20179;&#24211;  &#10;git init  &#10;  &#10;2.Clone&#36828;&#31243;&#29256;&#26412;&#24211;  &#10;git clone git@xbc.me:wordpress.git  &#10;  &#10;3.&#28155;&#21152;&#36828;&#31243;&#29256;&#26412;&#24211;origin&#65292;&#35821;&#27861;&#20026; git remote add [shortname] [url]  &#10;git remote add origin git@xbc.me:wordpress.git  &#10;  &#10;4.&#26597;&#30475;&#36828;&#31243;&#20179;&#24211;  &#10;git remote -v</span><br></pre></td></tr></table></figure>
-<h2 id="提交你的修改">提交你的修改</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#&#28155;&#21152;&#24403;&#21069;&#20462;&#25913;&#30340;&#25991;&#20214;&#21040;&#26242;&#23384;&#21306;  &#10;git add .  &#10;  &#10;#&#22914;&#26524;&#20320;&#33258;&#21160;&#36861;&#36394;&#25991;&#20214;&#65292;&#21253;&#25324;&#20320;&#24050;&#32463;&#25163;&#21160;&#21024;&#38500;&#30340;&#65292;&#29366;&#24577;&#20026;Deleted&#30340;&#25991;&#20214;  &#10;git add -u  &#10;  &#10;#&#25552;&#20132;&#20320;&#30340;&#20462;&#25913;  &#10;git commit &#8211;m &#34;&#20320;&#30340;&#27880;&#37322;&#34;  &#10;  &#10;#&#25512;&#36865;&#20320;&#30340;&#26356;&#26032;&#21040;&#36828;&#31243;&#26381;&#21153;&#22120;,&#35821;&#27861;&#20026; git push [&#36828;&#31243;&#21517;] [&#26412;&#22320;&#20998;&#25903;]:[&#36828;&#31243;&#20998;&#25903;]  &#10;git push origin master  &#10;  &#10;#&#26597;&#30475;&#25991;&#20214;&#29366;&#24577;  &#10;git status  &#10;  &#10;#&#36319;&#36394;&#26032;&#25991;&#20214;  &#10;git add readme.txt  &#10;  &#10;#&#20174;&#24403;&#21069;&#36319;&#36394;&#21015;&#34920;&#31227;&#38500;&#25991;&#20214;&#65292;&#24182;&#23436;&#20840;&#21024;&#38500;  &#10;git rm readme.txt  &#10;  &#10;#&#20165;&#22312;&#26242;&#23384;&#21306;&#21024;&#38500;&#65292;&#20445;&#30041;&#25991;&#20214;&#22312;&#24403;&#21069;&#30446;&#24405;&#65292;&#19981;&#20877;&#36319;&#36394;  &#10;git rm &#8211;cached readme.txt  &#10;  &#10;#&#37325;&#21629;&#21517;&#25991;&#20214;  &#10;git mv reademe.txt readme  &#10;  &#10;#&#26597;&#30475;&#25552;&#20132;&#30340;&#21382;&#21490;&#35760;&#24405;  &#10;git log  &#10;  &#10;#&#20462;&#25913;&#26368;&#21518;&#19968;&#27425;&#25552;&#20132;&#27880;&#37322;&#30340;&#65292;&#21033;&#29992;&#8211;amend&#21442;&#25968;  &#10;git commit --amend  &#10;  &#10;#&#24536;&#35760;&#25552;&#20132;&#26576;&#20123;&#20462;&#25913;&#65292;&#19979;&#38754;&#30340;&#19977;&#26465;&#21629;&#20196;&#21482;&#20250;&#24471;&#21040;&#19968;&#20010;&#25552;&#20132;&#12290;  &#10;git commit &#8211;m &#38;quot;add readme.txt&#38;quot;  &#10;git add readme_forgotten  &#10;git commit &#8211;amend  &#10;  &#10;#&#20551;&#35774;&#20320;&#24050;&#32463;&#20351;&#29992;git add .&#65292;&#23558;&#20462;&#25913;&#36807;&#30340;&#25991;&#20214;a&#12289;b&#21152;&#21040;&#26242;&#23384;&#21306;  &#10;  &#10;#&#29616;&#22312;&#20320;&#21482;&#24819;&#25552;&#20132;a&#25991;&#20214;&#65292;&#19981;&#24819;&#25552;&#20132;b&#25991;&#20214;&#65292;&#24212;&#35813;&#36825;&#26679;  &#10;git reset HEAD b  &#10;  &#10;#&#21462;&#28040;&#23545;&#25991;&#20214;&#30340;&#20462;&#25913;  &#10;git checkout &#8211;- readme.txt</span><br></pre></td></tr></table></figure>
-<h2 id="查看、切换、创建和删除分支">查看、切换、创建和删除分支</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git br -r           # &#26597;&#30475;&#36828;&#31243;&#20998;&#25903;  &#10;git br &#60;new_branch&#62; # &#21019;&#24314;&#26032;&#30340;&#20998;&#25903;  &#10;git br -v           # &#26597;&#30475;&#21508;&#20010;&#20998;&#25903;&#26368;&#21518;&#25552;&#20132;&#20449;&#24687;  &#10;git br --merged     # &#26597;&#30475;&#24050;&#32463;&#34987;&#21512;&#24182;&#21040;&#24403;&#21069;&#20998;&#25903;&#30340;&#20998;&#25903;  &#10;git br --no-merged  # &#26597;&#30475;&#23578;&#26410;&#34987;&#21512;&#24182;&#21040;&#24403;&#21069;&#20998;&#25903;&#30340;&#20998;&#25903;  &#10;   &#10;git co &#60;branch&#62;     # &#20999;&#25442;&#21040;&#26576;&#20010;&#20998;&#25903;  &#10;git co -b &#60;new_branch&#62; # &#21019;&#24314;&#26032;&#30340;&#20998;&#25903;&#65292;&#24182;&#19988;&#20999;&#25442;&#36807;&#21435;  &#10;git co -b &#60;new_branch&#62; &#60;branch&#62;  # &#22522;&#20110;branch&#21019;&#24314;&#26032;&#30340;new_branch  &#10;   &#10;git co $id          # &#25226;&#26576;&#27425;&#21382;&#21490;&#25552;&#20132;&#35760;&#24405;checkout&#20986;&#26469;&#65292;&#20294;&#26080;&#20998;&#25903;&#20449;&#24687;&#65292;&#20999;&#25442;&#21040;&#20854;&#20182;&#20998;&#25903;&#20250;&#33258;&#21160;&#21024;&#38500;  &#10;git co $id -b &#60;new_branch&#62;  # &#25226;&#26576;&#27425;&#21382;&#21490;&#25552;&#20132;&#35760;&#24405;checkout&#20986;&#26469;&#65292;&#21019;&#24314;&#25104;&#19968;&#20010;&#20998;&#25903;  &#10;   &#10;git br -d &#60;branch&#62;  # &#21024;&#38500;&#26576;&#20010;&#20998;&#25903;  &#10;git br -D &#60;branch&#62;  # &#24378;&#21046;&#21024;&#38500;&#26576;&#20010;&#20998;&#25903; (&#26410;&#34987;&#21512;&#24182;&#30340;&#20998;&#25903;&#34987;&#21024;&#38500;&#30340;&#26102;&#20505;&#38656;&#35201;&#24378;&#21046;)</span><br></pre></td></tr></table></figure>
-<h2 id="分支合并和rebase">分支合并和rebase</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge &#60;branch&#62;               # &#23558;branch&#20998;&#25903;&#21512;&#24182;&#21040;&#24403;&#21069;&#20998;&#25903;  &#10;git merge origin/master --no-ff  # &#19981;&#35201;Fast-Foward&#21512;&#24182;&#65292;&#36825;&#26679;&#21487;&#20197;&#29983;&#25104;merge&#25552;&#20132;  &#10;   &#10;git rebase master &#60;branch&#62;       # &#23558;master rebase&#21040;branch&#65292;&#30456;&#24403;&#20110;&#65306;  &#10;git co &#60;branch&#62; &#38;&#38; git rebase master &#38;&#38; git co master &#38;&#38; git merge &#60;branch&#62;</span><br></pre></td></tr></table></figure>
-<h2 id="Git补丁管理(方便在多台机器上开发同步时用)">Git补丁管理(方便在多台机器上开发同步时用)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff &#62; ../sync.patch         # &#29983;&#25104;&#34917;&#19969;  &#10;git apply ../sync.patch          # &#25171;&#34917;&#19969;  &#10;git apply --check ../sync.patch  #&#27979;&#35797;&#34917;&#19969;&#33021;&#21542;&#25104;&#21151;</span><br></pre></td></tr></table></figure>
-<h2 id="Git暂存管理">Git暂存管理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash                        # &#26242;&#23384;  &#10;git stash list                   # &#21015;&#25152;&#26377;stash  &#10;git stash apply                  # &#24674;&#22797;&#26242;&#23384;&#30340;&#20869;&#23481;  &#10;git stash drop                   # &#21024;&#38500;&#26242;&#23384;&#21306;</span><br></pre></td></tr></table></figure>
-<h2 id="Git远程分支管理">Git远程分支管理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull                         # &#25235;&#21462;&#36828;&#31243;&#20179;&#24211;&#25152;&#26377;&#20998;&#25903;&#26356;&#26032;&#24182;&#21512;&#24182;&#21040;&#26412;&#22320;  &#10;git pull --no-ff                 # &#25235;&#21462;&#36828;&#31243;&#20179;&#24211;&#25152;&#26377;&#20998;&#25903;&#26356;&#26032;&#24182;&#21512;&#24182;&#21040;&#26412;&#22320;&#65292;&#19981;&#35201;&#24555;&#36827;&#21512;&#24182;  &#10;git fetch origin                 # &#25235;&#21462;&#36828;&#31243;&#20179;&#24211;&#26356;&#26032;  &#10;git merge origin/master          # &#23558;&#36828;&#31243;&#20027;&#20998;&#25903;&#21512;&#24182;&#21040;&#26412;&#22320;&#24403;&#21069;&#20998;&#25903;  &#10;git co --track origin/branch     # &#36319;&#36394;&#26576;&#20010;&#36828;&#31243;&#20998;&#25903;&#21019;&#24314;&#30456;&#24212;&#30340;&#26412;&#22320;&#20998;&#25903;  &#10;git co -b &#60;local_branch&#62; origin/&#60;remote_branch&#62;  # &#22522;&#20110;&#36828;&#31243;&#20998;&#25903;&#21019;&#24314;&#26412;&#22320;&#20998;&#25903;&#65292;&#21151;&#33021;&#21516;&#19978;  &#10;   &#10;git push                         # push&#25152;&#26377;&#20998;&#25903;  &#10;git push origin master           # &#23558;&#26412;&#22320;&#20027;&#20998;&#25903;&#25512;&#21040;&#36828;&#31243;&#20027;&#20998;&#25903;  &#10;git push -u origin master        # &#23558;&#26412;&#22320;&#20027;&#20998;&#25903;&#25512;&#21040;&#36828;&#31243;(&#22914;&#26080;&#36828;&#31243;&#20027;&#20998;&#25903;&#21017;&#21019;&#24314;&#65292;&#29992;&#20110;&#21021;&#22987;&#21270;&#36828;&#31243;&#20179;&#24211;)  &#10;git push origin &#60;local_branch&#62;   # &#21019;&#24314;&#36828;&#31243;&#20998;&#25903;&#65292; origin&#26159;&#36828;&#31243;&#20179;&#24211;&#21517;  &#10;git push origin &#60;local_branch&#62;:&#60;remote_branch&#62;  # &#21019;&#24314;&#36828;&#31243;&#20998;&#25903;  &#10;git push origin :&#60;remote_branch&#62;  #&#20808;&#21024;&#38500;&#26412;&#22320;&#20998;&#25903;(git br -d &#60;branch&#62;)&#65292;&#28982;&#21518;&#20877;push&#21024;&#38500;&#36828;&#31243;&#20998;&#25903;</span><br></pre></td></tr></table></figure>
-<h2 id="基本的分支管理">基本的分支管理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#&#21019;&#24314;&#19968;&#20010;&#20998;&#25903;  &#10;git branch iss53  &#10;  &#10;#&#20999;&#25442;&#24037;&#20316;&#30446;&#24405;&#21040;iss53  &#10;git chekcout iss53  &#10;  &#10;#&#23558;&#19978;&#38754;&#30340;&#21629;&#20196;&#21512;&#22312;&#19968;&#36215;&#65292;&#21019;&#24314;iss53&#20998;&#25903;&#24182;&#20999;&#25442;&#21040;iss53  &#10;git chekcout &#8211;b iss53  &#10;  &#10;#&#21512;&#24182;iss53&#20998;&#25903;&#65292;&#24403;&#21069;&#24037;&#20316;&#30446;&#24405;&#20026;master  &#10;git merge iss53  &#10;  &#10;#&#21512;&#24182;&#23436;&#25104;&#21518;&#65292;&#27809;&#26377;&#20986;&#29616;&#20914;&#31361;&#65292;&#21024;&#38500;iss53&#20998;&#25903;  &#10;git branch &#8211;d iss53  &#10;  &#10;#&#25289;&#21435;&#36828;&#31243;&#20179;&#24211;&#30340;&#25968;&#25454;&#65292;&#35821;&#27861;&#20026; git fetch [remote-name]  &#10;git fetch  &#10;  &#10;#fetch &#20250;&#25289;&#21435;&#26368;&#26032;&#30340;&#36828;&#31243;&#20179;&#24211;&#25968;&#25454;&#65292;&#20294;&#19981;&#20250;&#33258;&#21160;&#21040;&#24403;&#21069;&#30446;&#24405;&#19979;&#65292;&#35201;&#33258;&#21160;&#21512;&#24182;  &#10;git pull  &#10;  &#10;#&#26597;&#30475;&#36828;&#31243;&#20179;&#24211;&#30340;&#20449;&#24687;  &#10;git remote show origin  &#10;  &#10;#&#24314;&#31435;&#26412;&#22320;&#30340;dev&#20998;&#25903;&#36861;&#36394;&#36828;&#31243;&#20179;&#24211;&#30340;develop&#20998;&#25903;  &#10;git checkout &#8211;b dev origin/develop</span><br></pre></td></tr></table></figure>
-<h2 id="Git远程仓库管理">Git远程仓库管理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v                    # &#26597;&#30475;&#36828;&#31243;&#26381;&#21153;&#22120;&#22320;&#22336;&#21644;&#20179;&#24211;&#21517;&#31216;  &#10;git remote show origin           # &#26597;&#30475;&#36828;&#31243;&#26381;&#21153;&#22120;&#20179;&#24211;&#29366;&#24577;  &#10;git remote add origin git@ github:robbin/robbin_site.git         # &#28155;&#21152;&#36828;&#31243;&#20179;&#24211;&#22320;&#22336;  &#10;git remote set-url origin git@ github.com:robbin/robbin_site.git # &#35774;&#32622;&#36828;&#31243;&#20179;&#24211;&#22320;&#22336;(&#29992;&#20110;&#20462;&#25913;&#36828;&#31243;&#20179;&#24211;&#22320;&#22336;)  &#10;git remote rm &#60;repository&#62;       # &#21024;&#38500;&#36828;&#31243;&#20179;&#24211;</span><br></pre></td></tr></table></figure>
-<h2 id="创建远程仓库">创建远程仓库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone --bare robbin_site robbin_site.git  # &#29992;&#24102;&#29256;&#26412;&#30340;&#39033;&#30446;&#21019;&#24314;&#32431;&#29256;&#26412;&#20179;&#24211;  &#10;scp -r my_project.git git@ git.csdn.net:~      # &#23558;&#32431;&#20179;&#24211;&#19978;&#20256;&#21040;&#26381;&#21153;&#22120;&#19978;  &#10;   &#10;mkdir robbin_site.git &#38;&#38; cd robbin_site.git &#38;&#38; git --bare init # &#22312;&#26381;&#21153;&#22120;&#21019;&#24314;&#32431;&#20179;&#24211;  &#10;git remote add origin git@ github.com:robbin/robbin_site.git    # &#35774;&#32622;&#36828;&#31243;&#20179;&#24211;&#22320;&#22336;  &#10;git push -u origin master                                      # &#23458;&#25143;&#31471;&#39318;&#27425;&#25552;&#20132;  &#10;git push -u origin develop  # &#39318;&#27425;&#23558;&#26412;&#22320;develop&#20998;&#25903;&#25552;&#20132;&#21040;&#36828;&#31243;develop&#20998;&#25903;&#65292;&#24182;&#19988;track  &#10;   &#10;git remote set-head origin master   # &#35774;&#32622;&#36828;&#31243;&#20179;&#24211;&#30340;HEAD&#25351;&#21521;master&#20998;&#25903;  &#10;&#10;&#10;&#20063;&#21487;&#20197;&#21629;&#20196;&#35774;&#32622;&#36319;&#36394;&#36828;&#31243;&#24211;&#21644;&#26412;&#22320;&#24211;&#10;&#10;git branch --set-upstream master origin/master  &#10;git branch --set-upstream develop origin/develop</span><br></pre></td></tr></table></figure>
+<h2 id="初始化配置">初始化配置</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">配置使用git仓库的人员姓名</span><br><span class="line">git config --global user.name <span class="string">"Your Name Comes Here"</span></span><br><span class="line"></span><br><span class="line">配置使用git仓库的人员email</span><br><span class="line">git config --global user.email you@yourdomain.example.com</span><br><span class="line"></span><br><span class="line">配置到缓存 默认<span class="number">15</span>分钟</span><br><span class="line">git config --global credential.helper cache </span><br><span class="line"></span><br><span class="line">修改缓存时间</span><br><span class="line">git config --global credential.helper <span class="string">'cache --timeout=3600'</span>  </span><br><span class="line"></span><br><span class="line">git config --global color.ui <span class="literal">true</span></span><br><span class="line">git config --global alias.co checkout</span><br><span class="line">git config --global alias.ci commit</span><br><span class="line">git config --global alias.st status</span><br><span class="line">git config --global alias.br branch</span><br><span class="line">git config --global core.editor <span class="string">"mate -w"</span>     设置Editor使用textmate</span><br><span class="line">git config -<span class="number">1</span> #列举所有配置</span><br><span class="line"></span><br><span class="line">用户的git配置文件~<span class="regexp">/.gitconfig</span></span><br></pre></td></tr></table></figure>
+<h2 id="查看、添加、提交、删除、找回，重置修改文件">查看、添加、提交、删除、找回，重置修改文件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">git help &lt;command&gt;   显示command的help  </span><br><span class="line">git show             显示某次提交的内容  </span><br><span class="line">git show $id  </span><br><span class="line">   </span><br><span class="line">git co  -- <span class="xml"><span class="tag">&lt;<span class="title">file</span>&gt;</span>    抛弃工作区修改  </span><br><span class="line">git co  .            抛弃工作区修改  </span><br><span class="line">   </span><br><span class="line">git add <span class="tag">&lt;<span class="title">file</span>&gt;</span>       将工作文件修改提交到本地暂存区  </span><br><span class="line">git add .            将所有修改过的工作文件提交暂存区  </span><br><span class="line">   </span><br><span class="line">git rm <span class="tag">&lt;<span class="title">file</span>&gt;</span>        从版本库中删除文件  </span><br><span class="line">git rm <span class="tag">&lt;<span class="title">file</span>&gt;</span> --cached  # 从版本库中删除文件，但不删除文件  </span><br><span class="line">   </span><br><span class="line">git reset <span class="tag">&lt;<span class="title">file</span>&gt;</span>     从暂存区恢复到工作文件  </span><br><span class="line">git reset -- .       从暂存区恢复到工作文件  </span><br><span class="line">git reset --hard     恢复最近一次提交过的状态，即放弃上次提交后的所有本次修改  </span><br><span class="line">   </span><br><span class="line">git ci <span class="tag">&lt;<span class="title">file</span>&gt;</span>  </span><br><span class="line">git ci .  </span><br><span class="line">git ci -a            将git add, git rm和git ci等操作都合并在一起做  </span><br><span class="line">git ci -am "some comments"  </span><br><span class="line">git ci --amend       修改最后一次提交记录  </span><br><span class="line">   </span><br><span class="line">git revert <span class="tag">&lt;<span class="title">$id</span>&gt;</span>     恢复某次提交的状态，恢复动作本身也创建了一次提交对象  </span><br><span class="line">git revert HEAD      恢复最后一次提交的状态</span></span><br></pre></td></tr></table></figure>
+<h2 id="查看文件diff">查看文件diff</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git diff &lt;file&gt;      比较当前文件和暂存区文件差异  </span><br><span class="line">git diff  </span><br><span class="line">git diff &lt;$id1&gt; <span class="xml"><span class="tag">&lt;<span class="title">$id2</span>&gt;</span>   比较两次提交之间的差异  </span><br><span class="line">git diff <span class="tag">&lt;<span class="title">branch1</span>&gt;</span>..<span class="tag">&lt;<span class="title">branch2</span>&gt;</span> 在两个分支之间比较  </span><br><span class="line">git diff --staged    比较暂存区和版本库差异  </span><br><span class="line">git diff --cached    比较暂存区和版本库差异  </span><br><span class="line">git diff --stat      仅仅比较统计信息</span></span><br></pre></td></tr></table></figure>
+<h2 id="查看提交记录">查看提交记录</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git log  </span><br><span class="line">git log &lt;file&gt;       查看该文件每次提交记录  </span><br><span class="line">git log -p &lt;file&gt;    查看每次详细修改内容的diff  </span><br><span class="line">git log -p -<span class="number">2</span>        查看最近两次详细修改内容的diff  </span><br><span class="line">git log --stat       查看提交统计信息  </span><br><span class="line"></span><br><span class="line">tig</span><br><span class="line">Mac上可以使用tig代替diff和log，brew install tig</span><br></pre></td></tr></table></figure>
+<h2 id="取得Git仓库">取得Git仓库</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">初始化一个版本仓库  </span><br><span class="line">git init  </span><br><span class="line">  </span><br><span class="line">Clone远程版本库  </span><br><span class="line">git clone git@xbc.me:wordpress.git  </span><br><span class="line">  </span><br><span class="line">添加远程版本库origin，语法为 git remote add [shortname] [url]  </span><br><span class="line">git remote add origin git@xbc.me:wordpress.git  </span><br><span class="line">  </span><br><span class="line">查看远程仓库  </span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+<h2 id="提交你的修改">提交你的修改</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">#添加当前修改的文件到暂存区  </span><br><span class="line">git add .  </span><br><span class="line">  </span><br><span class="line">#如果你自动追踪文件，包括你已经手动删除的，状态为Deleted的文件  </span><br><span class="line">git add -u  </span><br><span class="line">  </span><br><span class="line">#提交你的修改  </span><br><span class="line">git commit –m <span class="string">"你的注释"</span>  </span><br><span class="line">  </span><br><span class="line">#推送你的更新到远程服务器,语法为 git push [远程名] [本地分支]:[远程分支]  </span><br><span class="line">git push origin master  </span><br><span class="line">  </span><br><span class="line">#查看文件状态  </span><br><span class="line">git status  </span><br><span class="line">  </span><br><span class="line">#跟踪新文件  </span><br><span class="line">git add readme.txt  </span><br><span class="line">  </span><br><span class="line">#从当前跟踪列表移除文件，并完全删除  </span><br><span class="line">git rm readme.txt  </span><br><span class="line">  </span><br><span class="line">#仅在暂存区删除，保留文件在当前目录，不再跟踪  </span><br><span class="line">git rm –cached readme.txt  </span><br><span class="line">  </span><br><span class="line">#重命名文件  </span><br><span class="line">git mv reademe.txt readme  </span><br><span class="line">  </span><br><span class="line">#查看提交的历史记录  </span><br><span class="line">git log  </span><br><span class="line">  </span><br><span class="line">#修改最后一次提交注释的，利用–amend参数  </span><br><span class="line">git commit --amend  </span><br><span class="line">  </span><br><span class="line">#忘记提交某些修改，下面的三条命令只会得到一个提交。  </span><br><span class="line">git commit –m &amp;quot;add readme.txt&amp;quot;  </span><br><span class="line">git add readme_forgotten  </span><br><span class="line">git commit –amend  </span><br><span class="line">  </span><br><span class="line">#假设你已经使用git add .，将修改过的文件a、b加到暂存区  </span><br><span class="line">  </span><br><span class="line">#现在你只想提交a文件，不想提交b文件，应该这样  </span><br><span class="line">git reset HEAD b  </span><br><span class="line">  </span><br><span class="line">#取消对文件的修改  </span><br><span class="line">git checkout –- readme.txt</span><br></pre></td></tr></table></figure>
+<h2 id="查看、切换、创建和删除分支">查看、切换、创建和删除分支</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">git br -r           # 查看远程分支  </span><br><span class="line">git br &lt;new_branch&gt; # 创建新的分支  </span><br><span class="line">git br -v           # 查看各个分支最后提交信息  </span><br><span class="line">git br --merged     # 查看已经被合并到当前分支的分支  </span><br><span class="line">git br --no-merged  # 查看尚未被合并到当前分支的分支  </span><br><span class="line">   </span><br><span class="line">git co &lt;branch&gt;     # 切换到某个分支  </span><br><span class="line">git co -b &lt;new_branch&gt; # 创建新的分支，并且切换过去  </span><br><span class="line">git co -b &lt;new_branch&gt; <span class="xml"><span class="tag">&lt;<span class="title">branch</span>&gt;</span>  # 基于branch创建新的new_branch  </span><br><span class="line">   </span><br><span class="line">git co $id          # 把某次历史提交记录checkout出来，但无分支信息，切换到其他分支会自动删除  </span><br><span class="line">git co $id -b <span class="tag">&lt;<span class="title">new_branch</span>&gt;</span>  # 把某次历史提交记录checkout出来，创建成一个分支  </span><br><span class="line">   </span><br><span class="line">git br -d <span class="tag">&lt;<span class="title">branch</span>&gt;</span>  # 删除某个分支  </span><br><span class="line">git br -D <span class="tag">&lt;<span class="title">branch</span>&gt;</span>  # 强制删除某个分支 (未被合并的分支被删除的时候需要强制)</span></span><br></pre></td></tr></table></figure>
+<h2 id="分支合并和rebase">分支合并和rebase</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git merge &lt;branch&gt;               # 将branch分支合并到当前分支  </span><br><span class="line">git merge origin/master --no-ff  # 不要Fast-Foward合并，这样可以生成merge提交  </span><br><span class="line">   </span><br><span class="line">git rebase master &lt;branch&gt;       # 将master rebase到branch，相当于：  </span><br><span class="line">git co &lt;branch&gt; &amp;&amp; git rebase master &amp;&amp; git co master &amp;&amp; git merge &lt;branch&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Git补丁管理(方便在多台机器上开发同步时用)">Git补丁管理(方便在多台机器上开发同步时用)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git diff &gt; ../sync.patch         # 生成补丁  </span><br><span class="line">git apply ../sync.patch          # 打补丁  </span><br><span class="line">git apply --check ../sync.patch  #测试补丁能否成功</span><br></pre></td></tr></table></figure>
+<h2 id="Git暂存管理">Git暂存管理</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git stash                        # 暂存  </span><br><span class="line">git stash list                   # 列所有stash  </span><br><span class="line">git stash apply                  # 恢复暂存的内容  </span><br><span class="line">git stash drop                   # 删除暂存区</span><br></pre></td></tr></table></figure>
+<h2 id="Git远程分支管理">Git远程分支管理</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git pull                         # 抓取远程仓库所有分支更新并合并到本地  </span><br><span class="line">git pull --no-ff                 # 抓取远程仓库所有分支更新并合并到本地，不要快进合并  </span><br><span class="line">git fetch origin                 # 抓取远程仓库更新  </span><br><span class="line">git merge origin/master          # 将远程主分支合并到本地当前分支  </span><br><span class="line">git co --track origin/branch     # 跟踪某个远程分支创建相应的本地分支  </span><br><span class="line">git co -b &lt;local_branch&gt; origin/<span class="xml"><span class="tag">&lt;<span class="title">remote_branch</span>&gt;</span>  # 基于远程分支创建本地分支，功能同上  </span><br><span class="line">   </span><br><span class="line">git push                         # push所有分支  </span><br><span class="line">git push origin master           # 将本地主分支推到远程主分支  </span><br><span class="line">git push -u origin master        # 将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)  </span><br><span class="line">git push origin <span class="tag">&lt;<span class="title">local_branch</span>&gt;</span>   # 创建远程分支， origin是远程仓库名  </span><br><span class="line">git push origin <span class="tag">&lt;<span class="title">local_branch</span>&gt;</span>:<span class="tag">&lt;<span class="title">remote_branch</span>&gt;</span>  # 创建远程分支  </span><br><span class="line">git push origin :<span class="tag">&lt;<span class="title">remote_branch</span>&gt;</span>  #先删除本地分支(git br -d <span class="tag">&lt;<span class="title">branch</span>&gt;</span>)</span>，然后再push删除远程分支</span><br></pre></td></tr></table></figure>
+<h2 id="基本的分支管理">基本的分支管理</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#创建一个分支  </span><br><span class="line">git branch iss53  </span><br><span class="line">  </span><br><span class="line">#切换工作目录到iss53  </span><br><span class="line">git chekcout iss53  </span><br><span class="line">  </span><br><span class="line">#将上面的命令合在一起，创建iss53分支并切换到iss53  </span><br><span class="line">git chekcout –b iss53  </span><br><span class="line">  </span><br><span class="line">#合并iss53分支，当前工作目录为master  </span><br><span class="line">git merge iss53  </span><br><span class="line">  </span><br><span class="line">#合并完成后，没有出现冲突，删除iss53分支  </span><br><span class="line">git branch –d iss53  </span><br><span class="line">  </span><br><span class="line">#拉去远程仓库的数据，语法为 git fetch [remote-name]  </span><br><span class="line">git fetch  </span><br><span class="line">  </span><br><span class="line">#fetch 会拉去最新的远程仓库数据，但不会自动到当前目录下，要自动合并  </span><br><span class="line">git pull  </span><br><span class="line">  </span><br><span class="line">#查看远程仓库的信息  </span><br><span class="line">git remote show origin  </span><br><span class="line">  </span><br><span class="line">#建立本地的dev分支追踪远程仓库的develop分支  </span><br><span class="line">git checkout –b dev origin/develop</span><br></pre></td></tr></table></figure>
+<h2 id="Git远程仓库管理">Git远程仓库管理</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git remote -v                    # 查看远程服务器地址和仓库名称  </span><br><span class="line">git remote show origin           # 查看远程服务器仓库状态  </span><br><span class="line">git remote add origin git@ github:robbin/robbin_site.git         # 添加远程仓库地址  </span><br><span class="line">git remote set-url origin git@ github.com:robbin/robbin_site.git # 设置远程仓库地址(用于修改远程仓库地址)  </span><br><span class="line">git remote rm &lt;repository&gt;       # 删除远程仓库</span><br></pre></td></tr></table></figure>
+<h2 id="创建远程仓库">创建远程仓库</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">git clone --bare robbin_site robbin_site.git  # 用带版本的项目创建纯版本仓库  </span><br><span class="line">scp -r my_project.git git@ git.csdn.net:~      # 将纯仓库上传到服务器上  </span><br><span class="line">   </span><br><span class="line">mkdir robbin_site.git &amp;&amp; cd robbin_site.git &amp;&amp; git --bare init # 在服务器创建纯仓库  </span><br><span class="line">git remote add origin git@ github.com:robbin/robbin_site.git    # 设置远程仓库地址  </span><br><span class="line">git push -u origin master                                      # 客户端首次提交  </span><br><span class="line">git push -u origin develop  # 首次将本地develop分支提交到远程develop分支，并且track  </span><br><span class="line">   </span><br><span class="line">git remote set-head origin master   # 设置远程仓库的HEAD指向master分支  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">也可以命令设置跟踪远程库和本地库</span><br><span class="line"></span><br><span class="line">git branch --set-upstream master origin/master  </span><br><span class="line">git branch --set-upstream develop origin/develop</span><br></pre></td></tr></table></figure>
 
       
     </div>
-
-    <div class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/git/"> #git </a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/06/11/hexo副本/">Grunt打造前端自动化</a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </div>
-  </div>
-
-
-
-    
-      <div class="comments" id="comments">
-        
-          <div class="ds-thread" data-thread-key="2015/08/03/git命令/"
-               data-title="git常用命令" data-url="http://jsio.cn/2015/08/03/git命令/">
-          </div>
-        
-      </div>
     
   </div>
-
-
-        </div>
-
-        
-      </div>
-
-
-      
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            本站概览
-          </li>
-        </ul>
-      
-
-      <div class="site-overview">
-        <div class="site-author motion-element">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="jsio" />
-          <p class="site-author-name">jsio</p>
-        </div>
-        <p class="site-description motion-element">jsio.cn</p>
-        <div class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">文章</span>
-            </a>
-          </div>
-
-
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">8</span>
-              <span class="site-state-item-name">标签</span>
-              </a>
-          </div>
-
-        </div>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-              <a href="https://github.com/xurui3762791" target="_blank">github</a>
-            </span>
-            
-              <span class="links-of-author-item">
-              <a href="http://t.qq.com/x3762791" target="_blank">weibo</a>
-            </span>
-            
-          
-        </div>
-
-        
-        
-
-      </div>
-
-      
-        <div class="post-toc-wrap sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator"></div>
-          <div class="post-toc">
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化配置"><span class="nav-number">1.</span> <span class="nav-text">初始化配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看、添加、提交、删除、找回，重置修改文件"><span class="nav-number">2.</span> <span class="nav-text">查看、添加、提交、删除、找回，重置修改文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看文件diff"><span class="nav-number">3.</span> <span class="nav-text">查看文件diff</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看提交记录"><span class="nav-number">4.</span> <span class="nav-text">查看提交记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取得Git仓库"><span class="nav-number">5.</span> <span class="nav-text">取得Git仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交你的修改"><span class="nav-number">6.</span> <span class="nav-text">提交你的修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看、切换、创建和删除分支"><span class="nav-number">7.</span> <span class="nav-text">查看、切换、创建和删除分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支合并和rebase"><span class="nav-number">8.</span> <span class="nav-text">分支合并和rebase</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git补丁管理(方便在多台机器上开发同步时用)"><span class="nav-number">9.</span> <span class="nav-text">Git补丁管理(方便在多台机器上开发同步时用)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git暂存管理"><span class="nav-number">10.</span> <span class="nav-text">Git暂存管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git远程分支管理"><span class="nav-number">11.</span> <span class="nav-text">Git远程分支管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本的分支管理"><span class="nav-number">12.</span> <span class="nav-text">基本的分支管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git远程仓库管理"><span class="nav-number">13.</span> <span class="nav-text">Git远程仓库管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建远程仓库"><span class="nav-number">14.</span> <span class="nav-text">创建远程仓库</span></a></li></ol></div>
-            
-          </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
-        </div>
-      
-
-    </div>
-  </div>
-
-
-    </div>
-
-    <div id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">
+    
+<nav id="article-nav">
   
-  &copy; &nbsp; 
-  2015
-  <span class="with-love">
-    <i class="icon-heart"></i>
-  </span>
-  <span class="author">jsio</span>
+  
+    <a href="/2015/06/11/hexo副本/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Grunt打造前端自动化</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
 </div>
 
-<div class="powered-by">
-   <a class="theme-link" href="http://hexo.io">Hexo</a> 
-</div>
-
-<div class="theme-info">
 
 
-  <a class="theme-link" href="https://github.com/xurui3762791/nodejs-hexo">
-   github
-  </a>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="git命令" data-title="git常用命令" data-url="http://jsio.cn/2015/08/03/git命令/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
 </div>
 
 
 
 
-      </div>
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 jsio
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  
+      	</div>
     </div>
-
-    <div class="back-to-top"></div>
   </div>
-
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js"></script>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
 
 
-  <script type="text/javascript" src="/js/helpers.js"></script>
-  
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
 
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js" id="motion.global"></script>
 
 
 
 
-  
-  
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js" id="bootstrap.scrollspy.custom"></script>
 
-
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
     }
+});
 
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
 
-    function getTOCMaxHeight () {
-      var $sidebarInner = $('.sidebar-inner');
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.didShow', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-          var self = this;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      $(indicator).velocity('stop').velocity({
-        opacity: action === 'show' ? 0.4 : 0
-      }, { duration: 100 });
-    }
-
-  });
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
-  <script type="text/javascript" id="sidebar.nav">
-    $(document).ready(function () {
-      var html = $('html');
-
-      $('.sidebar-nav li').on('click', function () {
-        var item = $(this);
-        var activeTabClassName = 'sidebar-nav-active';
-        var activePanelClassName = 'sidebar-panel-active';
-        if (item.hasClass(activeTabClassName)) {
-          return;
-        }
-
-        var currentTarget = $('.' + activePanelClassName);
-        var target = $('.' + item.data('target'));
-
-        currentTarget.velocity('transition.slideUpOut', 200, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', 200)
-            .addClass(activePanelClassName);
-        });
-
-        item.siblings().removeClass(activeTabClassName);
-        item.addClass(activeTabClassName);
-      });
-
-      $('.post-toc a').on('click', function (e) {
-        e.preventDefault();
-        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        });
-      });
-
-      // Expand sidebar on post detail page by default, when post has a toc.
-      var $tocContent = $('.post-toc-content');
-      if (isDesktop() && CONFIG.sidebar === 'post') {
-        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          displaySidebar();
-        }
-      }
-    });
-  </script>
-
-
-
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      if (CONFIG.sidebar === 'always') {
-        displaySidebar();
-      }
-    });
-  </script>
-
-  
-
-  
-  
-
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"jsio"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
-
-
-  
-  
-
+  </div>
 </body>
 </html>

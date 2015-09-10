@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>All tags | web前端开发技术分享</title>
+  <title>Stylus:轻而易举实现CSS前缀和reset CSS | web前端开发技术分享</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="jsio.cn">
-<meta property="og:type" content="website">
-<meta property="og:title" content="All tags">
-<meta property="og:url" content="http://jsio.cn/tags/index.html">
+  <meta name="description" content="Break free from CSS prefix hell!摆脱CSS前缀地狱！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Stylus:轻而易举实现CSS前缀和reset CSS">
+<meta property="og:url" content="http://jsio.cn/2015/09/10/Stylus-轻而易举实现CSS前缀和reset-CSS/index.html">
 <meta property="og:site_name" content="web前端开发技术分享">
-<meta property="og:description" content="jsio.cn">
-<meta property="og:updated_time" content="2015-06-10T03:15:18.000Z">
+<meta property="og:description" content="Break free from CSS prefix hell!摆脱CSS前缀地狱！">
+<meta property="og:updated_time" content="2015-09-10T05:48:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="All tags">
-<meta name="twitter:description" content="jsio.cn">
+<meta name="twitter:title" content="Stylus:轻而易举实现CSS前缀和reset CSS">
+<meta name="twitter:description" content="Break free from CSS prefix hell!摆脱CSS前缀地狱！">
   
     <link rel="alternative" href="/atom.xml" title="web前端开发技术分享" type="application/atom+xml">
   
@@ -170,11 +170,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Stylus-轻而易举实现CSS前缀和reset-CSS" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/tags/index.html" class="article-date">
-  	<time datetime="2015-06-09T07:04:15.000Z" itemprop="datePublished">Jun 9 2015</time>
+      <a href="/2015/09/10/Stylus-轻而易举实现CSS前缀和reset-CSS/" class="article-date">
+  	<time datetime="2015-09-10T05:22:40.000Z" itemprop="datePublished">Sep 10 2015</time>
 </a>
     </div>
   
@@ -187,7 +187,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      All tags
+      Stylus:轻而易举实现CSS前缀和reset CSS
     </h1>
   
 
@@ -195,6 +195,10 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Stylus/">Stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+	</div>
+
         
 
         <div class="clearfix"></div>
@@ -203,13 +207,55 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>Break free from CSS prefix hell!<br>摆脱CSS前缀地狱！<br><a id="more"></a><br>CSS3 每个浏览器都有私有属性例如 <code>-moz</code> 代表firefox浏览器私有属性、<code>-ms</code> 代表IE浏览器私有属性、<code>-webkit</code>代表chrome、safari私有属性，在 CSS3 标准还在没有定稿的时候，CSS3 中有很多属性都还处于实验性阶段，各个浏览器都针对暂行的规范草稿根据自己的理解做了 CSS3 新特性实现，但因为规范尚未成熟和定稿，某些描述的不清晰或是处理逻辑的不完整可能导致一些目前的实现在日后被修改。暂时使用带前缀的属性比如 <code>-webkit-transform</code> 的初衷，是为了以后即便 <code>transform</code>的最终实现与目前不同，你原来写的 <code>-webkit-transform</code>还是可以正常工作。所以浏览器现在开始越来越倾向于直接实现最终属性而抛弃前缀了。老的浏览器可能不支持 <code>transform</code>，所以我们通常为了兼容各个版本的浏览器，<code>-webkit-transform</code>和 <code>transform</code>两个属性都加上了。</p>
+<ul>
+<li>-webkit- (Google Chrome &amp; Safari)</li>
+<li>-khtml- (Konqueror)</li>
+<li>-moz- (Mozilla Firefox)</li>
+<li>-ms- (Internet Explorer)</li>
+<li>-o- (Opéra)</li>
+<li>syntaxe normale</li>
+</ul>
+<h2 id="下载">下载</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ bower install AutoPrefixCss #下载</span><br><span class="line">$ bower info AutoPrefixCss #查看详情</span><br></pre></td></tr></table></figure>
+<h2 id="初衷">初衷</h2><p>网上有很多js实现的自动添加 CSS前缀的哦，例如<a href="https://github.com/postcss/autoprefixer" target="_blank" rel="external">autoprefixer</a> 、<a href="http://leaverou.github.io/prefixfree/" target="_blank" rel="external">prefixfree</a>。</p>
+<ul>
+<li><code>stylus</code>的出现感觉添加这种前缀不用太麻烦了。</li>
+<li>只生成CSS，浏览器直接渲染CSS，不用通过js生成CSS在渲染。</li>
+</ul>
+<h2 id="使用必备条件">使用必备条件</h2><p>需要安装 <code>node.js</code> 和 <code>stylus</code> ，还得学会使用 <code>stylus</code>， <a href="https://github.com/stylus/stylus" target="_blank" rel="external">stylus github</a></p>
+<h2 id="Usage_(reset-styl)">Usage (reset.styl)</h2><p>只需要将 <code>reset.styl</code> 到您的项目，然后引用 <code>@import(&#39;reset.styl&#39;)</code> ，然后在你所引用的<code>.styl</code> 中调用下面任何一个方法：</p>
+<ul>
+<li>global-reset() # 所有标签重置不包括HTML5新标签重置</li>
+<li>nested-reset() # 嵌套标签重置</li>
+<li>reset-font()</li>
+<li>reset-box-model()</li>
+<li>reset-body()</li>
+<li>reset-table() # 表格重置</li>
+<li>reset-table-cell() # 表格单格重置</li>
+<li>reset-html5() # HTML5新标签重置</li>
+</ul>
+<p>例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">import</span>(<span class="string">'reset.styl'</span>)</span><br><span class="line">global-reset()</span><br></pre></td></tr></table></figure></p>
+<h2 id="自动添加CSS后缀">自动添加CSS后缀</h2><p>只需要将 <code>vendor.styl</code> 到您的项目，然后引用 <code>@import(&#39;vendor.styl&#39;)</code> ，然后你在你的 <code>styl</code> 文件中正常使用 <code>stylus</code>语法就好了。效果如下例子：</p>
+<p>opacity<br>adds opacity filter for IE</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">import</span>(<span class="string">'vendor.styl'</span>)</span><br><span class="line">body</span><br><span class="line">    opacity:0.5</span><br></pre></td></tr></table></figure>
+<p>生成：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  opacity: <span class="number">0.5</span>;</span><br><span class="line">  -khtml-opacity: <span class="number">0.5</span>;</span><br><span class="line">  -moz-opacity: <span class="number">0.5</span>; <span class="comment">/* old Mozilla */</span></span><br><span class="line">  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=<span class="number">50</span>); <span class="comment">/*old IE */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/2015/08/03/git命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git常用命令</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
@@ -277,7 +323,7 @@ var duoshuoQuery = {short_name:"jsio"};
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

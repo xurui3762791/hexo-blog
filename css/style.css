@@ -246,7 +246,7 @@ a {
 #container .left-col .overlay {
   width: 100%;
   height: 180px;
-  background-color: #000;
+  background-color: #0eaad7;
   position: absolute;
   opacity: 0.7;
 }
@@ -505,6 +505,137 @@ a {
   -webkit-box-pack: center;
   -webkit-box-align: center;
   text-align: center;
+  -webkit-box-shadow: 0px 0px 10px #a6cfeb;
+  box-shadow: 0px 0px 10px #a6cfeb;
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  -ms-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -ms-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -ms-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  animation-play-state: running;
+/* Firefox: */
+  -moz-animation-name: myfirst;
+  -moz-animation-duration: 5s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-delay: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+  -moz-animation-play-state: running;
+/* Safari and Chrome: */
+  -webkit-animation-name: myfirst;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+/* Opera: */
+  -o-animation-name: myfirst;
+  -o-animation-duration: 5s;
+  -o-animation-timing-function: linear;
+  -o-animation-delay: 2s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-direction: alternate;
+  -o-animation-play-state: running;
+}
+@-moz-keyframes myfirst {
+  0% {
+    background: #f00;
+    left: 80px;
+    top: 0px;
+  }
+  25% {
+    background: #ff0;
+    left: -80px;
+    top: 0px;
+  }
+  50% {
+    background: #00f;
+    left: -80px;
+    top: 100px;
+  }
+  75% {
+    background: #008000;
+    left: 80px;
+    top: 100px;
+  }
+  100% {
+    background: #f00;
+    left: 80px;
+    top: 0px;
+  }
+}
+@-webkit-keyframes myfirst {
+  0% {
+    background: #f00;
+    left: 80px;
+    top: 0px;
+  }
+  25% {
+    background: #ff0;
+    left: -80px;
+    top: 0px;
+  }
+  50% {
+    background: #00f;
+    left: -80px;
+    top: 100px;
+  }
+  75% {
+    background: #008000;
+    left: 80px;
+    top: 100px;
+  }
+  100% {
+    background: #f00;
+    left: 80px;
+    top: 0px;
+  }
+}
+@-o-keyframes myfirst {
+  0% {
+    background: #f00;
+    left: 80px;
+    top: 0px;
+  }
+  25% {
+    background: #ff0;
+    left: -80px;
+    top: 0px;
+  }
+  50% {
+    background: #00f;
+    left: -80px;
+    top: 100px;
+  }
+  75% {
+    background: #008000;
+    left: 80px;
+    top: 100px;
+  }
+  100% {
+    background: #f00;
+    left: 80px;
+    top: 0px;
+  }
 }
 #header .profilepic img {
   width: 20%;
@@ -518,6 +649,132 @@ a {
   width: 100%;
   height: 100%;
   opacity: 1;
+}
+@-moz-keyframes myfirst {
+  0% {
+    background: #f00;
+    left: 80px;
+    top: 0px;
+  }
+  25% {
+    background: #ff0;
+    left: -80px;
+    top: 0px;
+  }
+  50% {
+    background: #00f;
+    left: -80px;
+    top: 100px;
+  }
+  75% {
+    background: #008000;
+    left: 80px;
+    top: 100px;
+  }
+  100% {
+    background: #f00;
+    left: 80px;
+    top: 0px;
+  }
+}
+@-webkit-keyframes myfirst {
+  0% {
+    background: #f00;
+    left: 80px;
+    top: 0px;
+  }
+  25% {
+    background: #ff0;
+    left: -80px;
+    top: 0px;
+  }
+  50% {
+    background: #00f;
+    left: -80px;
+    top: 100px;
+  }
+  75% {
+    background: #008000;
+    left: 80px;
+    top: 100px;
+  }
+  100% {
+    background: #f00;
+    left: 80px;
+    top: 0px;
+  }
+}
+@-o-keyframes myfirst {
+  0% {
+    background: #f00;
+    left: 80px;
+    top: 0px;
+  }
+  25% {
+    background: #ff0;
+    left: -80px;
+    top: 0px;
+  }
+  50% {
+    background: #00f;
+    left: -80px;
+    top: 100px;
+  }
+  75% {
+    background: #008000;
+    left: 80px;
+    top: 100px;
+  }
+  100% {
+    background: #f00;
+    left: 80px;
+    top: 0px;
+  }
+}
+@keyframes myfirst {
+  0% {
+    background: #f00;
+    left: 80px;
+    top: 0px;
+  }
+  25% {
+    background: #ff0;
+    left: -80px;
+    top: 0px;
+  }
+  50% {
+    background: #00f;
+    left: -80px;
+    top: 100px;
+  }
+  75% {
+    background: #008000;
+    left: 80px;
+    top: 100px;
+  }
+  100% {
+    background: #f00;
+    left: 80px;
+    top: 0px;
+  }
+}
+#header .profilepic img:hover {
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(0.6);
+  -moz-transition: all 300ms ease-in;
+  -moz-transform: scale(0.6);
+  -ms-transition: all 300ms ease-in;
+  -ms-transform: scale(0.6);
+  -webkit-transition: all 300ms ease-in;
+  -moz-transition: all 300ms ease-in;
+  -ms-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  transform: scale(0.6);
+  -webkit-box-shadow: 0px 0px 10px #fff;
+  box-shadow: 0px 0px 10px #fff;
 }
 #header .header-subtitle {
   text-align: center;
